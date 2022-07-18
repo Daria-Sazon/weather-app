@@ -1,0 +1,121 @@
+body {
+  font-family: 'Finger Paint', cursive;
+}
+
+.container {
+  border: 1px solid #3e8fcf;
+  border-radius: 30px;
+  padding: 20px;
+  margin-top: 30px;
+  width: 600px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  color: #f1f1f1;
+}
+
+.video-clouds {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+form {
+  margin: 20px;
+}
+
+.mainCity {
+  text-align: center;
+}
+
+.city-name {
+  font-size: 65px;
+  margin-bottom: 22px;
+}
+
+.timeDay {
+  line-height: 18px;
+  padding: 0;
+}
+
+.weatherDescription {
+  text-align: left;
+  line-height: 32px;
+  padding-left: 65px;
+}
+
+.col-currentTemp {
+  text-align: center;
+}
+
+.currentTemp {
+  font-size: 55px;
+  margin: 0;
+  text-align: center;
+}
+
+.description {
+  margin: 0;
+}
+
+.tempDay {
+  font-size: 18px;
+  text-align: center;
+  padding: 0;
+}
+
+input {
+  border: 1px solid #3e8fcf;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+.weatherWeek {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.col_nextWeather {
+  padding: 10px 0;
+  border-radius: 20px;
+  width: 85px;
+}
+
+.dayOfWeek {
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 7px;
+}
+
+.btn {
+  color: white;
+  border: 1px solid #3e8fcf;
+  width: 130px;
+  height: 38px;
+}
+
+.btn:hover{
+  box-shadow: 1px 1px 18px #3e8fcf;
+}
+
+.icon {
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 25px;
+}
+
+.max {
+  padding: 8px 0;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.min {
+  font-weight: lighter;
+}
