@@ -55,6 +55,8 @@ function displayWeatherCondition(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
+  celsiusTemp = response.data.main.temp;
 }
 
 function searchCity(city) {
@@ -92,13 +94,38 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#btn-current");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("Kyiv");
-
-var currentImg = document.getElementById('#col-currentTemp');
-
-function changeBgImg() {
-  if (temp - description === clouds)
-    newCurrentImg = "url('https://cdn-icons.flaticon.com/png/512/3222/premium/3222677.png?token=exp=1658162648~hmac=1ef5e3dad0f3e7a98d753e32d3bfcb1c')";
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("units-hover");
+  fahrenheitLink.classList.add("units-hover");
+  let fahrenheitTemp = (20 * 9/5) + 32;
+  let tempElement = document.querySelector("#currentTemp");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
-changeBgImg();
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  fahrenheitLink.classList.remove("units-hover");
+  celsiusLink.classList.add("units-hover");
+  let tempElement = document.querySelector("#currentTemp");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
+// var currentImg = document.getElementById('#col-currentTemp');
+
+// function changeBgImg() {
+//   if (temp - description === clouds)
+//     newCurrentImg = "url('https://cdn-icons.flaticon.com/png/512/3222/premium/3222677.png?token=exp=1658162648~hmac=1ef5e3dad0f3e7a98d753e32d3bfcb1c')";
+// }
+
+// changeBgImg();
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
+searchCity("Kyiv");
