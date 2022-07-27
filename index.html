@@ -7,11 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
- 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css" />
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <title>Weather App</title>
 </head>
@@ -23,11 +23,11 @@
   <div class="container">
     <form id="search-form">
       <div class="row">
-        <div class="col-9">
-          <input type="text" class="form-control" placeholder="Type a city" autofocus="on" autocomplete="off"
+        <div class="col-8">
+          <input type="search" class="form-control" placeholder="Type a city" autofocus="on" autocomplete="off"
             id="city-input">
         </div>
-        <div class="col-2">
+        <div class="col-3">
           <button class="btn" type="button" id="btn-current"><img src="./images/pin.png" width=18>
             Current</button>
         </div>
@@ -45,16 +45,16 @@
 
     <div class="row">
       <div class="col col-currentTemp">
-        <img src="images/cloudy-day.png" alt="weather" width="150" />
-        <p class="description" id="temp-description"></p>
+        <img src="" id="icon" alt="" />
+        <p class="description" id="description"></p>
 
       </div>
       <div class="col">
-        <h2 class="currentTemp"> <span id="currentTemp">21</span>°C</h2>
+        <h2 class="currentTemp"><span id="currentTemp">21</span><small class="units">°C</small></h2>
         <ul class="weatherDescription">
-          <li><img src="./images/thermometer.png" width="22px" /> Feels like: <span id="feels-like">20</span>°C</li>
+          <li><img src="./images/thermometer.png" width="22px" /> Feels like: <span id="feels-like">20</span><small class="units-feels">°C</small></li>
           <li><img src="./images/humidity.png" width="22px" /> Humidity: <span id="humidity">80</span>%</li>
-          <li><img src="./images/windy.png" width="22px" />  Wind: <span id="wind">5</span> mps</li>
+          <li><img src="./images/windy.png" width="22px" /> Wind: <span id="wind">5</span> mps</li>
         </ul>
       </div>
     </div>
@@ -103,8 +103,8 @@
     </div>
   </div>
   <div class="container container-site">
-  <p><a href="https://github.com/Daria-Sazon/weather-app" target="_blank">Open source-code</a> by Daria Sazon</p>
-</div>
+    <p><a href="https://github.com/Daria-Sazon/weather-app" target="_blank">Open source-code</a> by Daria Sazon</p>
+  </div>
   <script src="./src/script.js"></script>
 </body>
 

@@ -37,7 +37,7 @@ function formatDate(date) {
   ];
   let month = months[monthIndex];
 
-  let dates = date.getDay();
+  let dates = date.getDate();
 
   return `${dates} ${month}, ${day} ${hours}:${minutes}`;
 }
@@ -52,8 +52,9 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#temp-description").innerHTML =
-    response.data.weather[0].main;
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function searchCity(city) {
@@ -93,12 +94,11 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Kyiv");
 
-
 var currentImg = document.getElementById('#col-currentTemp');
 
-function changeBgImg(){
-  if (temp-description === clouds)
-  newCurrentImg = "url('https://cdn-icons.flaticon.com/png/512/3222/premium/3222677.png?token=exp=1658162648~hmac=1ef5e3dad0f3e7a98d753e32d3bfcb1c')";
+function changeBgImg() {
+  if (temp - description === clouds)
+    newCurrentImg = "url('https://cdn-icons.flaticon.com/png/512/3222/premium/3222677.png?token=exp=1658162648~hmac=1ef5e3dad0f3e7a98d753e32d3bfcb1c')";
 }
 
 changeBgImg();

@@ -1,5 +1,5 @@
 body {
-  font-family: 'Finger Paint', cursive;
+  font-family: "Finger Paint", cursive;
 }
 
 .container {
@@ -26,7 +26,16 @@ li {
 }
 
 form {
-  margin: 20px;
+  margin: 10px 25px 35px;
+}
+
+.row {
+  justify-content: space-around;
+}
+
+.col-8,
+.col-3 {
+  padding: 0;
 }
 
 .mainCity {
@@ -57,6 +66,18 @@ form {
   font-size: 55px;
   margin: 0;
   text-align: center;
+}
+
+.currentTemp .units {
+  position: relative;
+  top: -20px;
+  font-size: 20px;
+}
+
+.units-feels {  
+  position: relative;
+  top: -2px;
+  font-size: 10px;
 }
 
 .description {
@@ -99,7 +120,7 @@ input {
   height: 38px;
 }
 
-.btn:hover{
+.btn:hover {
   box-shadow: 1px 1px 18px #3e8fcf;
 }
 
@@ -118,6 +139,7 @@ input {
 
 .min {
   font-weight: lighter;
+  opacity: 0.6;
 }
 
 .container-site {
@@ -129,4 +151,9 @@ input {
   width: 600px;
   background: none;
   color: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+  font-size: 11px;
 }
