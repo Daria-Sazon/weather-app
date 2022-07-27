@@ -96,8 +96,6 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
-  celsiusLink.classList.remove("units-hover");
-  fahrenheitLink.classList.add("units-hover");
   let fahrenheitTemp = (20 * 9/5) + 32;
   let tempElement = document.querySelector("#currentTemp");
   tempElement.innerHTML = Math.round(fahrenheitTemp);
@@ -105,8 +103,6 @@ function showFahrenheitTemp(event) {
 
 function showCelsiusTemp(event) {
   event.preventDefault();
-  fahrenheitLink.classList.remove("units-hover");
-  celsiusLink.classList.add("units-hover");
   let tempElement = document.querySelector("#currentTemp");
   tempElement.innerHTML = Math.round(celsiusTemp);
 }
