@@ -36,75 +36,30 @@
     <div class="row mainCity">
       <div class="col">
         <h1 class="city-name" id="city-name">Kyiv</h1>
-        <ul class="timeDay">
-          <li id="date"></li>
-          <li id="time"></li>
-        </ul>
+        <p class="timeDay">Last updated: <span id="date"></span></p>
       </div>
     </div>
 
     <div class="row">
       <div class="col col-currentTemp">
-        <img src="" id="icon" alt="" />
+        <img src="" id="icon" alt="" width="130px"/>
         <p class="description" id="description"></p>
 
       </div>
       <div class="col">
-        <h2 class="currentTemp"><span id="currentTemp"></span><a link="#" id="celsius-link"
-            class="units units-hover"> °C</a><span class="units"> |</span><a href="#" id="fahrenheit-link"
-            class="units units-hover"> °F</a></h2>
+        <h2 class="currentTemp"><span id="currentTemp"></span><a link="#" id="celsius-link" class="units units-hover">
+            °C</a><span class="units"> |</span><a href="#" id="fahrenheit-link" class="units units-hover"> °F</a></h2>
         <ul class="weatherDescription">
-          <li><img src="./images/thermometer.png" width="22px" /> Feels like: <span id="feels-like"></span><small
+          <li><img src="./images/thermometer.png" class="img-description"/> Feels like: <span id="feels-like"></span><small
               class="units-feels"> °C</small></li>
-          <li><img src="./images/humidity.png" width="22px" /> Humidity: <span id="humidity"></span>%</li>
-          <li><img src="./images/windy.png" width="22px" /> Wind: <span id="wind"></span> mps</li>
+          <li><img src="./images/humidity.png" class="img-description"/> Humidity: <span id="humidity"></span>%</li>
+          <li><img src="./images/windy.png" class="img-description"/> Wind: <span id="wind"></span> m/h</li>
         </ul>
       </div>
-    </div>
-
-    <div class="row weatherWeek">
-      <div class="col">
-        <ul class="col_nextWeather">
-          <li class="dayOfWeek">Sun</li>
-          <img src="images/cloudy-day.png" width="40">
-          <li class="max">26°</li>
-          <li class="min">17°</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul class="col_nextWeather">
-          <li class="dayOfWeek">Sat</li>
-          <img src="images/stormy.png" width="40">
-          <li class="max">23°</li>
-          <li class="min">21°</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul class="col_nextWeather">
-          <li class="dayOfWeek">Sun</li>
-          <img src="images/sunny.png" width="40">
-          <li class="max">24°</li>
-          <li class="min">17°</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul class="col_nextWeather">
-          <li class="dayOfWeek">Mon</li>
-          <img src="./images/downpour.png" width="40">
-          <li class="max">29°</li>
-          <li class="min">20°</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul class="col_nextWeather">
-          <li class="dayOfWeek">Tue</li>
-          <img src="./images/rainy.png" width="40">
-          <li class="max">31°</li>
-          <li class="min">19°</li>
-        </ul>
-      </div>
+      <div class="weatherWeek" id="forecast"></div>
     </div>
   </div>
+
   <div class="container container-site">
     <p><a href="https://github.com/Daria-Sazon/weather-app" target="_blank">Open source-code</a> by Daria Sazon</p>
   </div>
