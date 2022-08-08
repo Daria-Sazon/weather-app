@@ -131,15 +131,6 @@ function showCelsiusTemp(event) {
 
 let celsiusTemp = null;
 
-// var currentImg = document.getElementById('#col-currentTemp');
-
-// function changeBgImg() {
-//   if (temp - description === clouds)
-//     newCurrentImg = "url('https://cdn-icons.flaticon.com/png/512/3222/premium/3222677.png?token=exp=1658162648~hmac=1ef5e3dad0f3e7a98d753e32d3bfcb1c')";
-// }
-
-// changeBgImg();
-
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
 
